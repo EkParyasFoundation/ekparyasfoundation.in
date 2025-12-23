@@ -86,11 +86,21 @@ nav a{
 
 /* BANNER */
 .banner{
-    background:url("images/banner.jpg") center/cover no-repeat;
-    color:#fff;
-    padding:90px 20px;
-    text-align:center;
+  background-image: url("images/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 60vh;          /* Desktop / Laptop */
+  min-height: 350px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
+
 .banner h2{
     font-size:38px;
 }
@@ -164,6 +174,13 @@ footer{
     padding:20px;
     margin-top:30px;
 }
+    @media (max-width: 768px){
+  .banner{
+    height: 40vh;
+    min-height: 280px;
+  }
+}
+
 </style>
 </head>
 
@@ -372,6 +389,7 @@ Donate Now
 
 </body>
 </html>
+
 
 
 
