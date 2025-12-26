@@ -238,14 +238,32 @@ Donate Now
 <section id="donation-qr" style="text-align:center;">
   <h2>Support Our Work</h2>
   <p>Scan the QR code below to donate and support our mission.</p>
+<div style="margin-top:25px;">
+  <div class="razorpay-embed-btn"
+    data-url="https://pages.razorpay.com/pl_RwCj3cSLpLlYUa/view"
+    data-text="Donate Now"
+    data-color="#1b5e20"
+    data-size="large">
+  </div>
+</div>
 
-  <img 
-    src="images/razorpay-qr.jpg" 
-    alt="Donate via Razorpay QR Code" 
-    style="max-width:250px;border:1px solid #ccc;padding:10px;border-radius:8px;"
-  >
+<script>
+(function(){
+  var d=document;
+  var x=!d.getElementById('razorpay-embed-btn-js');
+  if(x){
+    var s=d.createElement('script');
+    s.defer=!0;
+    s.id='razorpay-embed-btn-js';
+    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';
+    d.body.appendChild(s);
+  } else {
+    var rzp=window['__rzp__'];
+    rzp && rzp.init && rzp.init();
+  }
+})();
+</script>
 
-  <p style="margin-top:10px;font-weight:bold;">
     Powered by Razorpay | Scan & Pay with any UPI App
   </p>
 </section>
@@ -377,6 +395,7 @@ Donate Now
 
 </body>
 </html>
+
 
 
 
